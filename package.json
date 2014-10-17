@@ -45,9 +45,6 @@
   "scripts": {
     "test": "grunt test"
   },
-  "browser": {
-    "angular": "./node_modules/angular/angular.js"
-  },
   "browserify": {
     "transform": [
       "browserify-shim",
@@ -55,6 +52,6 @@
     ]
   },
   "browserify-shim": {
-    "angular": "angular"
+    "angular": "global:angular"
   }
 }
