@@ -5,8 +5,12 @@
   "devDependencies": {
     "angular": "^1.3.0",
     "angular-ui-router": "^0.2.11",
+    "browserify-ng-html2js": "~0.2.0",
+    "browserify-ngannotate": "~0.2.0",
+    "browserify-shim": "~3.8.0",
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
+    "grunt-browserify": "^3.0.1",
     "grunt-concurrent": "^0.5.0",
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-concat": "^0.4.0",
@@ -18,6 +22,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-exorcise": "^0.2.0",
     "grunt-filerev": "^0.2.1",
     "grunt-google-cdn": "^0.4.0",
     "grunt-karma": "^0.9.0",
@@ -30,6 +35,7 @@
     "karma": "^0.12.24",
     "karma-jasmine": "^0.1.5",
     "karma-phantomjs-launcher": "^0.1.4",
+    "load-grunt-config": "^0.13.2",
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1"
   },
@@ -38,5 +44,30 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "browser": {
+    "angular": "./node_modules/angular/angular.js",
+    "angular-messages": "./node_modules/angular-messages/angular-messages.js",
+    "angular-mocks": "./node_modules/angular-mocks/angular-mocks.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "browserify-ngannotate"
+    ]
+  },
+  "browserify-shim": {
+    "angular": "angular",
+    "angular-messages": {
+      "depends": [
+        "angular"
+      ],
+      "exports": "angular.module('ngMessages').name"
+    },
+    "angular-mocks": {
+      "depends": [
+        "angular"
+      ]
+    }
   }
 }
