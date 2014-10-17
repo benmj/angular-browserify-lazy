@@ -62,4 +62,12 @@ module.exports = function(grunt) {
         'less',
         'autoprefixer'
     ]);
+
+    grunt.registerTask('bundle-dev', [
+        'browserify:lib',
+        'browserify:dev',
+        'browserify:modules',
+        'exorcise:dev',
+        'exorcise:modules',
+    ]);
 };

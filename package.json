@@ -46,9 +46,7 @@
     "test": "grunt test"
   },
   "browser": {
-    "angular": "./node_modules/angular/angular.js",
-    "angular-messages": "./node_modules/angular-messages/angular-messages.js",
-    "angular-mocks": "./node_modules/angular-mocks/angular-mocks.js"
+    "angular": "./node_modules/angular/angular.js"
   },
   "browserify": {
     "transform": [
@@ -57,17 +55,6 @@
     ]
   },
   "browserify-shim": {
-    "angular": "angular",
-    "angular-messages": {
-      "depends": [
-        "angular"
-      ],
-      "exports": "angular.module('ngMessages').name"
-    },
-    "angular-mocks": {
-      "depends": [
-        "angular"
-      ]
-    }
+    "angular": "angular"
   }
 }

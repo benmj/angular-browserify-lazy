@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "sources": [
+    "node_modules/grunt-browserify/node_modules/browserify/node_modules/browser-pack/_prelude.js",
+    "/Users/ben/Documents/angular-browserfy-module/app/scripts/apples/controllers/granny-smith-ctrl.js",
+    "/Users/ben/Documents/angular-browserfy-module/app/scripts/apples/controllers/red-delicious-ctrl.js",
+    "/Users/ben/Documents/angular-browserfy-module/app/scripts/apples/index.js",
+    "/Users/ben/Documents/angular-browserfy-module/app/scripts/apples/routes.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;ACAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACpBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACpBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACnBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+  "file": "generated.js",
+  "sourceRoot": "",
+  "sourcesContent": [
+    "(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})",
+    "'use strict';\n\n/**\n * @ngdoc controller\n * @name buildium.apples.GrannySmithCtrl\n * @function\n * @module buildium.apples\n */\n\n/* @ngInject */\nmodule.exports = function GrannySmithCtrl($scope) {\n    var ctrl = this;\n\n    ctrl.things = [\n        'green',\n        'tart',\n        'sort of gross'\n    ];\n};\nmodule.exports.$inject = [\"$scope\"];\n",
+    "'use strict';\n\n/**\n * @ngdoc controller\n * @name buildium.apples.RedDeliciousCtrl\n * @function\n * @module buildium.apples\n */\n\n/* @ngInject */\nmodule.exports = function RedDeliciousCtrl($scope) {\n    var ctrl = this;\n\n    ctrl.things = [\n        'red',\n        'shiny',\n        'pretty gross'\n    ];\n};\nmodule.exports.$inject = [\"$scope\"];\n",
+    "'use strict';\n\nvar angular = require('angular');\n\n/**\n * @ngdoc overview\n * @name buildium.apple\n * @description\n *\n * # buildium.apple\n * apple\n */\nmodule.exports = angular\n    .module('buildium.apple', [])\n    .controller('RedDeliciousCtrl', require('./controllers/red-delicious-ctrl.js'))\n    .controller('GrannySmithCtrl', require('./controllers/granny-smith-ctrl.js'))\n    .config(require('./routes'))\n    .name;\n\n",
+    "'use strict';\n\n/* @ngInject */\nmodule.exports = function ($stateProvider) {\n    $stateProvider.\n        state('apples', {\n            url: '/apples',\n            templateUrl: 'scripts/apples/views/index.html',\n            controller: function () {\n                console.log('apple module');\n            }\n        })\n        .state('apples.delicious', {\n            url: '/delicious',\n            templateUrl: 'scripts/apples/views/red-delicious.html',\n            controller: 'RedDeliciousCtrl as ctrl'\n        })\n        .state('apples.granny', {\n            url: '/granny-smith',\n            templateUrl: 'scripts/apples/views/granny-smith.html',\n            controller: 'GrannySmithCtrl as ctrl'\n        }) ;\n};\nmodule.exports.$inject = [\"$stateProvider\"];\n\n"
+  ]
+}
