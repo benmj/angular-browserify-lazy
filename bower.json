@@ -14,6 +14,7 @@
     "tests"
   ],
   "devDependencies": {
-    "ui-router-extras": "~0.0.10"
+    "ui-router-extras": "~0.0.10",
+    "oclazyload": "~0.3.8"
   }
 }

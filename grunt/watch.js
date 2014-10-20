@@ -3,10 +3,9 @@ module.exports = {
         files: [
             '<%= yeoman.app %>/scripts/*.js',
             '<%= yeoman.app %>/scripts/**/*.js',
-            '!<%= yeoman.app %>/scripts/bundle.js',
-            '!<%= yeoman.app %>/scripts/templates.js'
-        ],
-        //tasks: ['newer:jshint:all']
+            '<%= yeoman.app %>/scripts/**/**/*.js',
+       ],
+       tasks: ['dev']
     },
     html: {
         files: [
@@ -21,10 +20,7 @@ module.exports = {
     },
     livereload: {
         files: [
-            '<%= yeoman.app %>/styles/*.css',
-            '<%= yeoman.app %>/scripts/bundle.js',
-            '<%= yeoman.app %>/views/**/*.html',
-            '<%= yeoman.app %>/*.html'
+            'dist/scripts/*.js'
         ],
         options: {
             livereload: true

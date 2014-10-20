@@ -19,6 +19,6 @@ module.exports = function ($stateProvider) {
             url: '/granny-smith',
             templateUrl: 'scripts/apples/views/granny-smith.html',
             controller: 'GrannySmithCtrl as ctrl'
-        }) ;
+        });
 };
 
