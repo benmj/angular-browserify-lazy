@@ -4,14 +4,14 @@ var angular = require('angular');
 
 /**
  * @ngdoc overview
- * @name buildium.apple
+ * @name buildium.apples
  * @description
  *
- * # buildium.apple
+ * # buildium.apples
  * apple
  */
 module.exports = angular
-    .module('buildium.apple', [])
+    .module('buildium.apples', [])
     .controller('RedDeliciousCtrl', require('./controllers/red-delicious-ctrl.js'))
     .controller('GrannySmithCtrl', require('./controllers/granny-smith-ctrl.js'))
     .config(require('./routes'))

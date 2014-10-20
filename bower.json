@@ -1,0 +1,19 @@
+{
+  "name": "angular-browserfy-module",
+  "version": "0.0.0",
+  "homepage": "https://github.com/benmj/angular-browserify-lazy",
+  "authors": [
+    "Ben Jacobs <benmillerj@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "ui-router-extras": "~0.0.10"
+  }
+}

@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
     // Load grunt tasks automatically
     require('load-grunt-config')(grunt, {
-        jitGrunt: {
+        'jit-grunt': {
             ngtemplates: 'grunt-angular-templates',
             useminPrepare: 'grunt-usemin'
         },
@@ -20,54 +20,15 @@ module.exports = function(grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
-    grunt.registerTask('test', [
-        'clean:server',
-        'connect:test',
-        'karma:unit'
-    ]);
-
-    grunt.registerTask('test-watch', [
-        'clean:server',
-        'connect:test',
-        'karma:watch'
-    ]);
-
-    grunt.registerTask('test-debug', [
-        'clean:server',
-        'connect:test',
-        'karma:debug'
-    ]);
-
-    grunt.registerTask('build', [
+    grunt.registerTask('dev', [
         'clean:dist',
-        'jshint',
-        'ngtemplates:dist',
-        'browserify:dist',
-        'less',
-        'autoprefixer',
-        'useminPrepare',
-        'concurrent:dist',
-        'copy:dist',
-        'cssmin',
-        'uglify',
-        'filerev',
-        'usemin'
-    ]);
 
-    grunt.registerTask('build-dev', [
-        'clean:dist',
-        'jshint',
+        'ngtemplates:main',
+        'ngtemplates:apples',
+        'ngtemplates:oranges',
+
+        'copy',
         'browserify:dev',
         'exorcise:dev',
-        'less',
-        'autoprefixer'
-    ]);
-
-    grunt.registerTask('bundle-dev', [
-        'browserify:lib',
-        'browserify:dev',
-        'browserify:modules',
-        'exorcise:dev',
-        'exorcise:modules',
     ]);
 };

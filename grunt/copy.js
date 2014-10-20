@@ -9,8 +9,11 @@ module.exports = {
             src: [
                 '*.{ico,png,txt}',
                 '*.html',
-                'images/{,*/}*.{webp}',
-                'fonts/*'
+                'images/*',
+                'fonts/*',
+
+                // bad bad bad
+                'bower_components/**/**/*',
             ]
         }]
     },

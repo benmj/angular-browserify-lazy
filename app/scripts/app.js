@@ -12,9 +12,12 @@ var angular = require('angular');
  */
 
 angular.module('angularBrowserfyModuleApp', [
-        require('angular-ui-router'),
+        // declared globally -- for now
+        'ui.router',
+        'ct.ui.router.extras',
+
         require('./common'),
-//        require('./apples'),
-//        require('./oranges')
+        require('./apples'),
+        require('./oranges')
     ])
     .config(require('./routes'));
