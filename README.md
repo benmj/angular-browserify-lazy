@@ -25,4 +25,4 @@ While this is certainly cool, I'm not sure that it's necessary to lazy load our 
 - there's lag when moving between portions of the app
 - it's a solution in search of a problem. Except for the `.config()` and `.run()` blocks of individual modules, code is only executed when its needed (controllers, directives, services, etc)
 - we could still lazy-load vendor code that's only used in certain parts of the app
-- there are challenges about the interaction between Angular's Dependency Injection when loading modules asynchronously. For example, it's easy to overright modules that have already been registered, which leads to unusual results.
+- there are challenges about the interaction between Angular's Dependency Injection when loading modules asynchronously. For example, it's easy to overwrite modules that have already been registered, which leads to unusual results.
